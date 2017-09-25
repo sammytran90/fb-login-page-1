@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery.js"></script>
+    <script src="js/custom.js"></script>
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/ionicons.css">
+    <title>Facebook_login_page_ver_1.0</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <div class="a1 a2">
+            <div class="b1">
+                <!-- logo -->
+                <div class="c1 dp3">
+                    <a href="#" class="d1 dp1">
+                        <span class="e1 dp1"></span>
+                    </a>
+                </div>
+                <!-- Login -->
+                <div class="c2 dp3">
+                    <form action="#" method="post" style="margin-right:-1px">
+                        <div class="d2 dp1">
+                            <div class="e2 dp3 he1">
+                                <label for="email">Email hoặc điện thoại</label>
+                                <input type="text" name="email" id="email">
+                            </div>
+                            <div class="e2 dp3 he1">
+                                <label for="email">Mật khẩu</label>
+                                <input type="password" name="pass" id="pass">
+                            </div>
+                            <div class="e2 dp3 he1">
+                                <input type="submit" value="Đăng nhập">
+                            </div>
+                        </div>
+                        <div class="d3">
+                            <a href="#">Quên tài khoản?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- contents -->
+        <div class="a2">
+            <div class="b2">
+                <div class="b1 b1-c3 dp2">
+                    <!-- Lastest logins -->
+                    <div class="c1 d4">
+                        <div class="ft1 fz1">Đăng nhập gần đây</div>
+                        <div class="e3 ft2 fz2">Nhấp vào ảnh của bạn để đăng nhập</div>
+                        <div class="dp2">
+                            <!-- login1 -->
+                            <div class="e3-f1">
+                                <div>
+                                    <a href="#">
+                                        <img src="./Pics/login1.jpg" alt="" class="img1">
+                                        <div class="g1 fz3">Trung</div>
+                                    </a>
+                                </div>
+                                <span class="g2">
+                                     <i class="icon ion-close-round"></i> 
+                                </span>
+                                <span class="g3">1</span>
+                            </div>
+                            <!-- login2 -->
+                            <div class="e3-f1">
+                                <div>
+                                    <a href="#">
+                                        <img src="./Pics/login2.jpg" alt="" class="img1">
+                                        <div class="g1 fz3">Hiếu</div>
+                                    </a>
+                                </div>
+                                <span class="g2">
+                                     <i class="icon ion-close-round"></i> 
+                                </span>
+                                <span class="g3">3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- New Sign-up -->
+                    <div class="c2 wi-c2">
+                        <div class="ft1 fz1">Tạo tài khoản mới</div>
+                        <div class="e3 ft2 fz2">Miễn phí và sẽ luôn như vậy.</div>
+                        <div class="dp1">
+                            <!-- Sign-up details -->
+                            <div class="e4">
+                                <form name="sign-up-form" id="sign-up-form" onsubmit="return validateForm()" action="#" method="post">
+                                    <div class="dp1" style="height:41px">
+                                        <div class="f2 dp3 c1 e4-f3">
+                                            <input class="ip1 ft3" type="text" id="firstname-sn" name="firstname-sn" placeholder="Họ">
+                                            <span class="g4 g4-1 dp4">Tên bạn là gì?</span>
+                                            <!-- dp4 -->
+                                            <span class="g4 dp4"> <!-- dp4 -->
+                                                <i class="icon ion-alert"></i>
+                                            </span>
+                                        </div>
+                                        <div class="f2 dp3 c2 e4-f3">
+                                            <input class="ip1 ft3" type="text" id="lastname-sn" name="lastname-sn" placeholder="Tên">
+                                            <span class="g4 g4-2 dp4">Tên bạn là gì?</span>
+                                            <!-- dp4 -->
+                                            <span class="g4 dp4"><!-- dp4 -->
+                                                <i class="icon ion-alert"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="dp1 e4-f3" style="width:399px">
+                                        <input class="ip1 ft3" type="text" id="email-sn" name="email-sn" placeholder="Số di động hoặc email">
+                                        <span class="g4 g4-3 dp4">Bạn sẽ sử dụng thông tin này khi đăng nhập và khi cần đặt lại mật khẩu.</span>
+                                        <!-- dp4 -->
+                                        <span class="g4 dp4"><!-- dp4 -->
+                                            <i class="icon ion-alert"></i>
+                                        </span>
+                                    </div>
+                                    <div class="dp1 e4-f3" style="width:399px">
+                                        <input class="ip1 ft3" type="text" id="pass-sn" name="pass-sn" placeholder="Mật khẩu mới">
+                                        <span class="g4 g4-3 dp4">Nhập mật khẩu có tối thiểu 6 ký tự bao gồm số, chữ cái và dấu chấm câu (như ! và &).</span>
+                                        <!-- dp4 -->
+                                        <span class="g4 dp4"><!-- dp4 -->
+                                            <i class="icon ion-alert"></i>
+                                         </span>
+                                    </div>
+                                    <div class="dp1 e5">
+                                        <div class="g5 fz4">Ngày sinh</div>
+                                        <div class="g6">
+                                            <span class="dp5">
+                                                <select name="day" id="day" title="Ngày">
+                                                    <option value="0">Ngày</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18" selected>18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+                                                </select>
+                                                <select name="month" id="month" title="Tháng">
+                                                    <option value="0">Tháng</option>
+                                                    <option value="1">Tháng 1</option>
+                                                    <option value="2">Tháng 2</option>
+                                                    <option value="3">Tháng 3</option>
+                                                    <option value="4">Tháng 4</option>
+                                                    <option value="5">Tháng 5</option>
+                                                    <option value="6" selected>Tháng 6</option>
+                                                    <option value="7">Tháng 7</option>
+                                                    <option value="8">Tháng 8</option>
+                                                    <option value="9">Tháng 9</option>
+                                                    <option value="10">Tháng 10</option>
+                                                    <option value="11">Tháng 11</option>
+                                                    <option value="12">Tháng 12</option>
+                                                </select>
+                                                <select name="year" id="year" title="Năm">
+                                                    <option value="0">Năm</option>
+                                                    <option value="2017">2017</option>
+                                                    <option value="2016">2016</option>
+                                                    <option value="2015">2015</option>
+                                                    <option value="2014">2014</option>
+                                                    <option value="2013">2013</option>
+                                                    <option value="2012">2012</option>
+                                                    <option value="2011">2011</option>
+                                                    <option value="2010">2010</option>
+                                                    <option value="2009">2009</option>
+                                                    <option value="2008">2008</option>
+                                                    <option value="2007">2007</option>
+                                                    <option value="2006">2006</option>
+                                                    <option value="2005">2005</option>
+                                                    <option value="2004">2004</option>
+                                                    <option value="2003">2003</option>
+                                                    <option value="2002">2002</option>
+                                                    <option value="2001">2001</option>
+                                                    <option value="2000">2000</option>
+                                                    <option value="1999">1999</option>
+                                                    <option value="1998">1998</option>
+                                                    <option value="1997">1997</option>
+                                                    <option value="1996">1996</option>
+                                                    <option value="1995">1995</option>
+                                                    <option value="1994">1994</option>
+                                                    <option value="1993" selected>1993</option>
+                                                    <option value="1992">1992</option>
+                                                    <option value="1991">1991</option>
+                                                    <option value="1990">1990</option>
+                                                    <option value="1989">1989</option>
+                                                    <option value="1988">1988</option>
+                                                    <option value="1987">1987</option>
+                                                    <option value="1986">1986</option>
+                                                    <option value="1985">1985</option>
+                                                    <option value="1984">1984</option>
+                                                    <option value="1983">1983</option>
+                                                    <option value="1982">1982</option>
+                                                    <option value="1981">1981</option>
+                                                    <option value="1980">1980</option>
+                                                    <option value="1979">1979</option>
+                                                    <option value="1978">1978</option>
+                                                    <option value="1977">1977</option>
+                                                    <option value="1976">1976</option>
+                                                    <option value="1975">1975</option>
+                                                    <option value="1974">1974</option>
+                                                    <option value="1973">1973</option>
+                                                    <option value="1972">1972</option>
+                                                    <option value="1971">1971</option>
+                                                    <option value="1970">1970</option>
+                                                    <option value="1969">1969</option>
+                                                    <option value="1968">1968</option>
+                                                    <option value="1967">1967</option>
+                                                    <option value="1966">1966</option>
+                                                    <option value="1965">1965</option>
+                                                    <option value="1964">1964</option>
+                                                    <option value="1963">1963</option>
+                                                    <option value="1962">1962</option>
+                                                    <option value="1961">1961</option>
+                                                    <option value="1960">1960</option>
+                                                    <option value="1959">1959</option>
+                                                    <option value="1958">1958</option>
+                                                    <option value="1957">1957</option>
+                                                    <option value="1956">1956</option>
+                                                    <option value="1955">1955</option>
+                                                    <option value="1954">1954</option>
+                                                    <option value="1953">1953</option>
+                                                    <option value="1952">1952</option>
+                                                    <option value="1951">1951</option>
+                                                    <option value="1950">1950</option>
+                                                    <option value="1949">1949</option>
+                                                    <option value="1948">1948</option>
+                                                    <option value="1947">1947</option>
+                                                    <option value="1946">1946</option>
+                                                    <option value="1945">1945</option>
+                                                    <option value="1944">1944</option>
+                                                    <option value="1943">1943</option>
+                                                    <option value="1942">1942</option>
+                                                    <option value="1941">1941</option>
+                                                    <option value="1940">1940</option>
+                                                    <option value="1939">1939</option>
+                                                    <option value="1938">1938</option>
+                                                    <option value="1937">1937</option>
+                                                    <option value="1936">1936</option>
+                                                    <option value="1935">1935</option>
+                                                    <option value="1934">1934</option>
+                                                    <option value="1933">1933</option>
+                                                    <option value="1932">1932</option>
+                                                    <option value="1931">1931</option>
+                                                    <option value="1930">1930</option>
+                                                    <option value="1929">1929</option>
+                                                    <option value="1928">1928</option>
+                                                    <option value="1927">1927</option>
+                                                    <option value="1926">1926</option>
+                                                    <option value="1925">1925</option>
+                                                    <option value="1924">1924</option>
+                                                    <option value="1923">1923</option>
+                                                    <option value="1922">1922</option>
+                                                    <option value="1921">1921</option>
+                                                    <option value="1920">1920</option>
+                                                    <option value="1919">1919</option>
+                                                    <option value="1918">1918</option>
+                                                    <option value="1917">1917</option>
+                                                    <option value="1916">1916</option>
+                                                    <option value="1915">1915</option>
+                                                    <option value="1914">1914</option>
+                                                    <option value="1913">1913</option>
+                                                    <option value="1912">1912</option>
+                                                    <option value="1911">1911</option>
+                                                    <option value="1910">1910</option>
+                                                    <option value="1909">1909</option>
+                                                    <option value="1908">1908</option>
+                                                    <option value="1907">1907</option>
+                                                    <option value="1906">1906</option>
+                                                    <option value="1905">1905</option>
+                                                </select>                                                
+                                            </span>
+                                            <a class="dp3" href="#" title="Nhấp chuột để biết thêm thông tin">Tại sao tôi cần cung cấp ngày sinh của mình?</a>
+                                        </div>
+                                        <div class="g7">
+                                            <span class="dp3">
+                                                <input type="radio" name="gender" value="female" id="gender-f">
+                                                <label class="fz4" for="gender-f">Nữ</label>
+                                            </span>
+                                            <span class="dp3">
+                                                <input type="radio" name="gender" value="Male" id="gender-m">
+                                                <label class="fz4" for="gender-m">Nam</label>
+                                            </span>
+                                            <span class="g4 dp4"><!-- dp4 -->
+                                                <i class="icon ion-alert"></i>
+                                            </span>
+                                        </div>
+                                        <div class="g7">
+                                            Bằng cách nhấp vào Tạo tài khoản, bạn đồng ý với<a href="#">Điều khoản</a> của
+                                            chúng tôi và rằng bạn đã đọc<a href="#">Chính sách dữ liệu</a> của chúng tôi,
+                                            bao gồm<a href="#">Sử dụng cookie</a>.Bạn có thể nhận được thông báo qua SMS
+                                            từ Facebook và có thể bỏ chọn bất kỳ lúc nào.
+                                        </div>
+                                        <div>
+                                            <button type="submit" class="btn1 fz2">Tạo tài khoản</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="e6">
+                                <a href="#">Tạo Trang</a> dành cho người nổi tiếng, nhãn hiệu hoặc doanh nghiệp.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="b1 c4">
+                    <ul id="language">
+                        <li>Tiếng Việt</li>
+                        <li>
+                            <a href="#">English (UK)</a>
+                        </li>
+                        <li>
+                            <a href="#">中文(台灣)</a>
+                        </li>
+                        <li>
+                            <a href="#">한국어</a>
+                        </li>
+                        <li>
+                            <a href="#">日本語</a>
+                        </li>
+                        <li>
+                            <a href="#">Français (France)</a>
+                        </li>
+                        <li>
+                            <a href="#">ภาษาไทย</a>
+                        </li>
+                        <li>
+                            <a href="#">Español</a>
+                        </li>
+                        <li>
+                            <a href="#">Português (Brasil)</a>
+                        </li>
+                        <li>
+                            <a href="#">Deutsch</a>
+                        </li>
+                        <li>
+                            <a href="#">Italiano</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon ion-plus"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="dp1">
+                        <div class="d5 dp3">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Đăng ký Facebook">Đăng ký</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Duyệt thư mục dành cho Người nổi tiếng & nhân vật của công chúng của chúng tôi.">Người nổi tiếng</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Tạo bước ngoặt mới trong sự nghiệp của bạn với công ty tuyệt vời của chúng tôi">Tuyển dụng</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d5 dp3">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Đăng nhập Facebook">Đăng nhập</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Duyệt thư mục sản phẩm trên Marketplace của chúng tôi.">Marketplace</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Tìm hiểu về quyền riêng tư của bạn và Facebook">Quyền riêng tư</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d5 dp3">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Xem Messenger.">Messenger</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Duyệt qua danh mục nhóm.">Nhóm</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Tìm hiểu về cookie và Facebook.">Cookie</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d5 dp3">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Facebook Lite dành cho Android.">Facebook Lite</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Duyệt thư mục Công thức nấu ăn.">Công thức nấu ăn</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Tìm hiểu về Lựa chọn quảng cáo.">
+                                        Lựa chọn quảng cáo
+                                        <i class="icon ion-nuclear"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d5 dp3">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Xem Facebook Di động.">Di động</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Duyệt thư mục Thể thao của chúng tôi.">Thể thao</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Xem lại điều khoản và chính sách của chúng tôi.">Điều khoản</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d5 dp3">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Tìm bất kỳ ai trên web.">Tìm bạn bè</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Hãy xem Moments.">Moments</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Truy cập Trung tâm trợ giúp của chúng tôi.">Trợ giúp</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d5 dp3">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Duyệt thư mục người của chúng tôi.">Danh bạ</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Hãy xem Instagram">Instagram</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d5 dp3">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Duyệt thư mục trang của chúng tôi.">Trang</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Đọc blog của chúng tôi, khám phá trung tâm tài nguyên và tìm cơ hội việc làm.">Giới thiệu</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d5 dp3">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Xem những địa điểm nổi tiếng trên Facebook.">Địa điểm</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Quảng cáo trên Facebook.">Tạo quảng cáo</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d5 dp3">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Xem trò chơi trên Facebook.">Trò chơi</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Tạo Trang">Tạo Trang</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d5 dp3">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Duyệt thư mục địa điểm của chúng tôi.">Vị trí</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Phát triển trên nền tảng của chúng tôi.">Nhà phát triển</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="b3">
+                        <span>Facebook © 2017</span>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
